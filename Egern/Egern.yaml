@@ -274,7 +274,7 @@ rules:
     match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Lan.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/InteractiveBrokers.yaml
+    match: https://github.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/InteractiveBrokers.yaml
     policy: 盈透
 - geoip:
     match: CN

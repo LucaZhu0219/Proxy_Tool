@@ -1,6 +1,8 @@
 # 规则名称: InteractiveBrokers
 # 规则统计: 2
 
+domain_set:
+  - api.ibkr.com
+
 domain_suffix_set:
   - interactivebrokers.com
-  - ibkr.com
