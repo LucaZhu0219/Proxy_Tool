@@ -7,14 +7,15 @@ domain_suffix_set:
   - apple-dns.net
   - apple-mapkit.com
   - apple.co
-  - apple.com
   - apple.news
   - appsto.re
-  - appstore.com
   - cdn-apple.com
-  - icloud-content.com
-  - icloud.com
-  - itunes.com
   - me.com
   - organicfruitapps.com
   - push-apple.com.akadns.net
+
+domain_regex_set:
+  # match apple.com domains except Apple Music
+  - ^(?!(?:music\.apple\.com)$)(?:.+\.)?apple\.com$
+  # match itunes.apple.com domains except Apple Music streaming hosts
+  - ^(?!(?:aod-ssl|aod|audio-ssl|audio|mvod|streamingaudio)\.itunes\.apple\.com$)(?:.+\.)?itunes\.com$
