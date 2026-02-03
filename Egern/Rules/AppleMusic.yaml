@@ -8,6 +8,7 @@ domain_set:
   - audio.itunes.apple.com
   - mvod.itunes.apple.com
   - streamingaudio.itunes.apple.com
+  - radio-activity.itunes.apple.com
 domain_suffix_set:
   - applemusic.com
   - blobstore.apple.com

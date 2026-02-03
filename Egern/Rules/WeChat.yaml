@@ -38,6 +38,7 @@ domain_suffix_set:
   - wx.qq.com
   - wxs.qq.com
   - yun-hl.3g.qq.com
+  - qq.com.cn
 domain_keyword_set:
   - 101.226.129.
   - 101.226.211.

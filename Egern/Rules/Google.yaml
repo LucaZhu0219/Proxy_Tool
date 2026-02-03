@@ -24,6 +24,7 @@ domain_suffix_set:
   - youtube.com
   - yt.be
   - ytimg.com
+  - googleusercontent.com
 domain_keyword_set:
   - gmail
   - google
