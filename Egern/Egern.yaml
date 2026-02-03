@@ -184,97 +184,97 @@ policy_groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
 rules:
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Direct.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Direct.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Reject.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Reject.yaml
     policy: REJECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/AI.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/AI.yaml
     policy: AI
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Github.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Github.yaml
     policy: 微软服务
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/OneDrive.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/OneDrive.yaml
     policy: 微软服务
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Microsoft.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Microsoft.yaml
     policy: 微软服务
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/YouTube.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/YouTube.yaml
     policy: 谷歌服务
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Google.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Google.yaml
     policy: 谷歌服务
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Telegram.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Telegram.yaml
     policy: 电报消息
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Twitter.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Twitter.yaml
     policy: 推特消息
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Instagram.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Instagram.yaml
     policy: Instagram
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Game.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Game.yaml
     policy: 游戏平台
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Emby.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Emby.yaml
     policy: Emby
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Bahamut.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Bahamut.yaml
     policy: 国际媒体
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Disney.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Disney.yaml
     policy: 国际媒体
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/HBO.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/HBO.yaml
     policy: 国际媒体
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Netflix.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Netflix.yaml
     policy: 国际媒体
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Spotify.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Spotify.yaml
     policy: 国际媒体
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/PrimeVideo.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/PrimeVideo.yaml
     policy: 国际媒体
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/TikTok.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/TikTok.yaml
     policy: 国际媒体
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Proxy.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Proxy.yaml
     policy: 国外网站
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/AppleCN.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/AppleCN.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/AppleMusic.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/AppleMusic.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/AppleServers.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/AppleServers.yaml
     policy: AI
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Bilibili.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Bilibili.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/WeChat.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/WeChat.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/AppStore.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/AppStore.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/iCloud.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/iCloud.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/ChinaDomain.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/ChinaDomain.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Rules/Lan.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/Lan.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Rules/InteractiveBrokers.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/InteractiveBrokers.yaml
     policy: 盈透
 - geoip:
     match: CN
@@ -282,7 +282,7 @@ rules:
 - default:
     policy: 兜底分流
 modules:
-- url: https://github.com/LucaZhu0219/Proxy_Tool/Egern/Module/YouTube.yaml
+- url: https://github.com/LucaZhu0219/Proxy_Tool/blob/main/Egern/Module/YouTube.yaml
   enabled: false
 - name: SubStore
   url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Egern.yaml
