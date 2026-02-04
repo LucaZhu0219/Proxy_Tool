@@ -304,7 +304,7 @@ rules:
 - default:
     policy: 兜底分流
 modules:
-- url: https://github.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Module/YouTube.yaml
+- url: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Module/YouTube.yaml
   enabled: false
 - name: SubStore
   url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Egern.yaml
