@@ -117,6 +117,15 @@ policy_groups:
     - 台湾节点
     - 手动选择
 - select:
+    name: HSBC
+    policies:
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - DIRECT
+- select:
     name: 游戏平台
     policies:
     - 香港节点
@@ -247,10 +256,10 @@ rules:
     match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Proxy.yaml
     policy: 国外网站
 - rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleCN.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleMusic.yaml
     policy: DIRECT
 - rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleMusic.yaml
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleCN.yaml
     policy: DIRECT
 - rule_set:
     match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleServers.yaml
@@ -276,6 +285,9 @@ rules:
 - rule_set:
     match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/InteractiveBrokers.yaml
     policy: 盈透
+- rule_set:
+    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/HSBC.yaml
+    policy: HSBC
 - geoip:
     match: CN
     policy: DIRECT

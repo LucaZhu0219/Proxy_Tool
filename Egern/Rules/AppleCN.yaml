@@ -67,7 +67,7 @@ domain_suffix_set:
   - experiments.apple.com
   - gs-loc-cn.apple.com
   - gs-loc.apple.com
-  - gsp10-ssl-cn.ls.apple.com
+  - ssl-cn.ls.apple.com
   - gsp12-cn.ls.apple.com
   - gsp13-cn.ls.apple.com
   - gsp4-cn.ls.apple.com
