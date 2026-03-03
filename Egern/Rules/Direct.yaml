@@ -30,6 +30,7 @@ domain_set:
   - update.googleapis.com
   - vd.l.qq.com
   - vi.l.qq.com
+  - dash.ouonetwork.com
 domain_suffix_set:
   - blog.google
   - cnspeedtest.cn
