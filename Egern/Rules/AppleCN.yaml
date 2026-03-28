@@ -65,6 +65,7 @@ domain_suffix_set:
   - dejavu.apple.com
   - download.developer.apple.com
   - experiments.apple.com
+  - gc.apple.com
   - gs-loc-cn.apple.com
   - gs-loc.apple.com
   - gsp12-cn.ls.apple.com
