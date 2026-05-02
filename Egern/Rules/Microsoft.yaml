@@ -25,6 +25,7 @@ domain_suffix_set:
   - live.com
   - live.net
   - lync.com
+  - microsoftonline.com
   - msappproxy.net
   - msauth.net
   - msauthimages.net
