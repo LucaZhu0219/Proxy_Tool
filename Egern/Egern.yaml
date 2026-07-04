@@ -1,312 +1,313 @@
 ipv6: true
 vif_only: true
 hijack_dns:
-- '*:53'
+  - "*:53"
 geoip_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
 asn_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
 proxy_latency_test_url: http://1.1.1.1/generate_204
 direct_latency_test_url: http://connectivitycheck.platform.hicloud.com/generate_204
 dns:
   bootstrap:
-  - system
+    - system
   upstreams:
     Domestic-DNS:
-    - 223.5.5.5
-    - 119.29.29.29
+      - 223.5.5.5
+      - 119.29.29.29
   forward:
-  - wildcard:
-      match: '*'
-      value: Domestic-DNS
+    - wildcard:
+        match: "*"
+        value: Domestic-DNS
   hosts:
     iosapps.itunes.apple.com:
-    - iosapps.itunes.apple.com.download.ks-cdn.com
+      - iosapps.itunes.apple.com.download.ks-cdn.com
 policy_groups:
-- external:
-    name: 手动选择
-    type: select
-    urls:
-    - https://oss-china-bucket.c1-click.selectgroup.click/api/graphql?token=6f200fc3da512657b70c43121f4029f4
-    icon: https://github.com/Repcz/Repcz.github.io/raw/main/docs/egern/Photo/Egern.png
-    hidden: false
-- select:
-    name: Apple
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-- select:
-    name: 国外网站
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-- select:
-    name: 国际媒体
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-- select:
-    name: 微软服务
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-- select:
-    name: 谷歌服务
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-- select:
-    name: 电报消息
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-- select:
-    name: 推特消息
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
-- select:
-    name: Instagram
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png
-- select:
-    name: AI
-    policies:
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-- select:
-    name: 盈透
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    - DIRECT
-- select:
-    name: HSBC
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - DIRECT
-- select:
-    name: 游戏平台
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-- select:
-    name: Emby
-    policies:
-    - 手动选择
-    flatten: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-- select:
-    name: 兜底分流
-    policies:
-    - 香港节点
-    - 美国节点
-    - 狮城节点
-    - 日本节点
-    - 台湾节点
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-- auto_test:
-    name: 香港节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: (?i)🇭🇰|香港|(\b(HK|Hong)\b)
-    tolerance: 0
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-- auto_test:
-    name: 美国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: (?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)
-    tolerance: 0
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-- auto_test:
-    name: 狮城节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: (?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)
-    tolerance: 0
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-- auto_test:
-    name: 日本节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: (?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)
-    tolerance: 0
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-- auto_test:
-    name: 台湾节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: (?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)
-    tolerance: 0
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+  - external:
+      name: 手动选择
+      type: select
+      urls:
+        - https://oss-china-bucket.c1-click.selectgroup.click/api/graphql?token=
+        - https://oss2-china-south-bucket.selectgroup.click/api/graphql?token=6f200fc3da512657b70c43121f4029f4
+      icon: https://github.com/Repcz/Repcz.github.io/raw/main/docs/egern/Photo/Egern.png
+      hidden: false
+  - select:
+      name: Apple
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+  - select:
+      name: 国外网站
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+  - select:
+      name: 国际媒体
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+  - select:
+      name: 微软服务
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+  - select:
+      name: 谷歌服务
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+  - select:
+      name: 电报消息
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+  - select:
+      name: 推特消息
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+  - select:
+      name: Instagram
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png
+  - select:
+      name: AI
+      policies:
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+  - select:
+      name: 盈透
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+        - DIRECT
+  - select:
+      name: HSBC
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - DIRECT
+  - select:
+      name: 游戏平台
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+  - select:
+      name: Emby
+      policies:
+        - 手动选择
+      flatten: true
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+  - select:
+      name: 兜底分流
+      policies:
+        - 香港节点
+        - 美国节点
+        - 狮城节点
+        - 日本节点
+        - 台湾节点
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+  - auto_test:
+      name: 香港节点
+      policies:
+        - 手动选择
+      flatten: true
+      filter: (?i)🇭🇰|香港|(\b(HK|Hong)\b)
+      tolerance: 0
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+  - auto_test:
+      name: 美国节点
+      policies:
+        - 手动选择
+      flatten: true
+      filter: (?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)
+      tolerance: 0
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  - auto_test:
+      name: 狮城节点
+      policies:
+        - 手动选择
+      flatten: true
+      filter: (?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)
+      tolerance: 0
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+  - auto_test:
+      name: 日本节点
+      policies:
+        - 手动选择
+      flatten: true
+      filter: (?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)
+      tolerance: 0
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+  - auto_test:
+      name: 台湾节点
+      policies:
+        - 手动选择
+      flatten: true
+      filter: (?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)
+      tolerance: 0
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
 rules:
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Direct.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Reject.yaml
-    policy: REJECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AI.yaml
-    policy: AI
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Github.yaml
-    policy: 微软服务
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/OneDrive.yaml
-    policy: 微软服务
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Microsoft.yaml
-    policy: 微软服务
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/YouTube.yaml
-    policy: 谷歌服务
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Google.yaml
-    policy: 谷歌服务
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Telegram.yaml
-    policy: 电报消息
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Twitter.yaml
-    policy: 推特消息
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Instagram.yaml
-    policy: Instagram
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Game.yaml
-    policy: 游戏平台
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Emby.yaml
-    policy: Emby
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Bahamut.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Disney.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/HBO.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Netflix.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Spotify.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/PrimeVideo.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/TikTok.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Proxy.yaml
-    policy: 国外网站
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleMusic.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleCN.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleServers.yaml
-    policy: Apple
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Bilibili.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/WeChat.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppStore.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/iCloud.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/ChinaDomain.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Lan.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/InteractiveBrokers.yaml
-    policy: 盈透
-- rule_set:
-    match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/HSBC.yaml
-    policy: HSBC
-- geoip:
-    match: CN
-    policy: DIRECT
-- default:
-    policy: 兜底分流
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Direct.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Reject.yaml
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AI.yaml
+      policy: AI
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Github.yaml
+      policy: 微软服务
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/OneDrive.yaml
+      policy: 微软服务
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Microsoft.yaml
+      policy: 微软服务
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/YouTube.yaml
+      policy: 谷歌服务
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Google.yaml
+      policy: 谷歌服务
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Telegram.yaml
+      policy: 电报消息
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Twitter.yaml
+      policy: 推特消息
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Instagram.yaml
+      policy: Instagram
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Game.yaml
+      policy: 游戏平台
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Emby.yaml
+      policy: Emby
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Bahamut.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Disney.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/HBO.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Netflix.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Spotify.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/PrimeVideo.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/TikTok.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Proxy.yaml
+      policy: 国外网站
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleMusic.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleCN.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleServers.yaml
+      policy: Apple
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Bilibili.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/WeChat.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppStore.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/iCloud.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/ChinaDomain.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Lan.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/InteractiveBrokers.yaml
+      policy: 盈透
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/HSBC.yaml
+      policy: HSBC
+  - geoip:
+      match: CN
+      policy: DIRECT
+  - default:
+      policy: 兜底分流
 modules:
-- url: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Module/YouTube.yaml
-  enabled: false
-- name: SubStore
-  url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Egern.yaml
-  enabled: false
+  - url: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Module/YouTube.yaml
+    enabled: false
+  - name: SubStore
+    url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Egern.yaml
+    enabled: false
