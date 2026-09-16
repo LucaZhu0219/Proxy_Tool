@@ -13,6 +13,24 @@ domain_suffix_set:
   - me.com
   - organicfruitapps.com
   - push-apple.com.akadns.net
+  - guzzoni-apple-com.v.aaplimg.com
+  - guzzoni.apple.com
+  - guzzoni.smoot.apple.com
+  - mask-api.fe.apple-dns.net
+  - mask-api.icloud.com
+  - mask.icloud.com
+  - mask-t.apple-dns.net
+  - mask.apple-dns.net
+  - apple-relay.mask.apple-dns.net
+  - apple-relay.apple.com
+  - apple-relay.cloudflare.com
+  - apple-relay.fastly-edge.com
+  - cp4.cloudflare.com
+  - gspe1-ssl.ls.apple.com
+  - ls.apple.com
+  - smoot.apple.com
+  - apps.mzstatic.com
+  - mask-h2.icloud.com
 
 domain_regex_set:
   # match apple.com domains except Apple Music
