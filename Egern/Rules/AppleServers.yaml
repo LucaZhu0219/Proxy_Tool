@@ -31,6 +31,7 @@ domain_suffix_set:
   - smoot.apple.com
   - apps.mzstatic.com
   - mask-h2.icloud.com
+  - gateway.icloud.com
 
 domain_regex_set:
   # match apple.com domains except Apple Music
