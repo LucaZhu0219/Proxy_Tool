@@ -32,9 +32,13 @@ domain_suffix_set:
   - apps.mzstatic.com
   - mask-h2.icloud.com
   - gateway.icloud.com
+  - mask-api.icloud.com
 
 domain_regex_set:
   # match apple.com domains except Apple Music
   - ^(?!(?:music\.apple\.com)$)(?:.+\.)?apple\.com$
   # match itunes.apple.com domains except Apple Music streaming hosts
   - ^(?!(?:aod-ssl|aod|audio-ssl|audio|mvod|streamingaudio)\.itunes\.apple\.com$)(?:.+\.)?itunes\.com$
+
+domain_keyword_set:
+  - siri
