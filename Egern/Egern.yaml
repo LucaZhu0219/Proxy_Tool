@@ -207,14 +207,17 @@ policy_groups:
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
 rules:
   - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AI.yaml
+      policy: AI
+  - rule_set:
+      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleServers.yaml
+      policy: Apple
+  - rule_set:
       match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Direct.yaml
       policy: DIRECT
   - rule_set:
       match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Reject.yaml
       policy: REJECT
-  - rule_set:
-      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AI.yaml
-      policy: AI
   - rule_set:
       match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Github.yaml
       policy: 微软服务
@@ -275,9 +278,6 @@ rules:
   - rule_set:
       match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleCN.yaml
       policy: DIRECT
-  - rule_set:
-      match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/AppleServers.yaml
-      policy: Apple
   - rule_set:
       match: https://raw.githubusercontent.com/LucaZhu0219/Proxy_Tool/refs/heads/main/Egern/Rules/Bilibili.yaml
       policy: DIRECT
